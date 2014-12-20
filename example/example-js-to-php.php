@@ -22,9 +22,9 @@ $(document).ready(function(){
 if(isset($_POST["decrypt"])){
     include("../cryptojs-aes.php");
     ?>
-    Json value received: <input type="text" value="<?=htmlentities($_POST["json"])?>" size="90" disabled="disabled"/><br/>
-    Passphrase: <input type="text" value="<?=$_POST["pass"]?>" size="90" disabled="disabled"/><br/>
-    Decrypted value: <input type="text" value="<?=cryptoJsAesDecrypt($_POST["pass"], $_POST["json"])?>" size="45" disabled="disabled"/><br/>
+    Json value received: <input type="text" value="<?php echo htmlentities($_POST["json"])?>" size="90" disabled="disabled"/><br/>
+    Passphrase: <input type="text" value="<?php echo $_POST["pass"]?>" size="90" disabled="disabled"/><br/>
+    Decrypted value: <input type="text" value="<?php echo cryptoJsAesDecrypt($_POST["pass"], $_POST["json"])?>" size="45" disabled="disabled"/><br/>
     <hr/>
     <br/><br/>
     <?php
