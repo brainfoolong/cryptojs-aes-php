@@ -33,7 +33,7 @@ function cryptoJsAesDecrypt($passphrase, $jsonString){
 }
 
 /**
-* Encrypt data from a CryptoJS json decoding string
+* Encrypt value to a cryptojs compatiable json encoding string
 *
 * @param mixed $passphrase
 * @param mixed $value
