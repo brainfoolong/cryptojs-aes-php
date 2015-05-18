@@ -1,7 +1,5 @@
-cryptojs-aes-php
+cryptojs-aes-php - CryptoJS 3.x AES encryption/decryption on client side with Javascript and on server side with PHP
 ================
-
-CryptoJS 3.x AES encryption/decryption on client side with Javascript and on server side with PHP
 
 I've long researched to make this working for me and i want to share my solution to make it possible to encrypt/decrypt data from/to CryptoJS and PHP.
 This works with CryptoJS 3.x and PHP with openssl support.
