@@ -6,3 +6,8 @@ This works with CryptoJS 3.x and PHP with openssl support.
 
 I use a JSON format for encryption/decryption to be able to use any possible object/array/string data on both sides.
 I also use the standard AES implementation from CryptoJS with a passphrase. I don't generate special keys, iv's or salts.
+
+Requirements
+====
+PHP 5.3+ or higher
+PHP with OpenSSL Support: http://php.net/manual/en/openssl.installation.php
