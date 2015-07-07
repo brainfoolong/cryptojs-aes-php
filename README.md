@@ -9,5 +9,5 @@ I also use the standard AES implementation from CryptoJS with a passphrase. I do
 
 Requirements
 ====
-PHP 5.3+ or higher
-PHP with OpenSSL Support: http://php.net/manual/en/openssl.installation.php
+* PHP 5.3+ or higher
+* PHP with OpenSSL Support: http://php.net/manual/en/openssl.installation.php
