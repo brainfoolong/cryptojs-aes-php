@@ -15,8 +15,8 @@ var CryptoJSAesJson = {
     parse: function (jsonStr) {
         var j = JSON.parse(jsonStr);
         var cipherParams = CryptoJS.lib.CipherParams.create({ciphertext: CryptoJS.enc.Base64.parse(j.ct)});
-        if (j.iv) cipherParams.iv = CryptoJS.enc.Hex.parse(j.iv)
-        if (j.s) cipherParams.salt = CryptoJS.enc.Hex.parse(j.s)
+        if (j.iv) cipherParams.iv = CryptoJS.enc.Hex.parse(j.iv);
+        if (j.s) cipherParams.salt = CryptoJS.enc.Hex.parse(j.s);
         return cipherParams;
     }
 }
