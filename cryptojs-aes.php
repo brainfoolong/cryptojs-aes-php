@@ -16,9 +16,11 @@
 */
 function cryptoJsAesDecrypt($passphrase, $jsonString){
     $jsondata = json_decode($jsonString, true);
-    $salt = hex2bin($jsondata["s"]);
+    try {
+        $salt = hex2bin($jsondata["s"]);
+        $iv  = hex2bin($jsondata["iv"]);
+    } catch(Exception $e) { return null; }
     $ct = base64_decode($jsondata["ct"]);
-    $iv  = hex2bin($jsondata["iv"]);
     $concatedPassphrase = $passphrase.$salt;
     $md5 = array();
     $md5[0] = md5($concatedPassphrase, true);
