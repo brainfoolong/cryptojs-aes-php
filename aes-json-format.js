@@ -10,7 +10,7 @@ var CryptoJSAesJson = {
         var j = {ct: cipherParams.ciphertext.toString(CryptoJS.enc.Base64)};
         if (cipherParams.iv) j.iv = cipherParams.iv.toString();
         if (cipherParams.salt) j.s = cipherParams.salt.toString();
-        return JSON.stringify(j);
+        return JSON.stringify(j).replace(/\s/g, '');
     },
     parse: function (jsonStr) {
         var j = JSON.parse(jsonStr);

@@ -10,9 +10,12 @@ If you find any errors or have ideas for improvements just let me know with an i
 
 ## Requirements
 
-* PHP 5.4+ or higher, PHP7 supported
+* PHP 5.4+ or higher, all PHP7 versions also supported
 * PHP with OpenSSL Support: http://php.net/manual/en/openssl.installation.php
 * Does not work with following php.ini option enabled: http://php.net/manual/en/mbstring.overload.php
 
 ## Support me
 If you like to buy some coffee, i will appriciate it. You can do this on [Patreon](https://www.patreon.com/brainfoolong) or via [PayPal](https://www.paypal.me/brainfoolong)
+
+## Changelog
+* 26.04.2018 - fixed an issue with `aes-json-format.js` that included whitespace in base64 in some cases
