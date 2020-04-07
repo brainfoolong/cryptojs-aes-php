@@ -13,7 +13,8 @@ It uses default aes-256-cbc implementation with random salts and initialization 
 Breaking changes: This library has changed to PSR-4 namespaces as of 7. April 2020. Also parameters and behaviour has changed to the previous version. For the old version of this library head to the [legacy branch](https://github.com/brainfoolong/cryptojs-aes-php/tree/legacy).
 
 ## How to use
-###### PHP | See dist/example-php.php
+###### PHP | See [dist/example-php.php](https://github.com/brainfoolong/cryptojs-aes-php/blob/master/dist/example-php.php)
+You need the file `src/CryptoJsAes.php`
 ```php
 <?php
 use Nullix\CryptoJsAes\CryptoJsAes;
@@ -33,7 +34,8 @@ $decrypted = CryptoJsAes::decrypt($encrypted, $password);
 echo "Encrypted: " . $encrypted . "\n";
 echo "Decrypted: " . print_r($decrypted, true) . "\n";
 ```
-###### Javascript | See dist/example-js.html
+###### Javascript | See [dist/example-js.html](https://github.com/brainfoolong/cryptojs-aes-php/blob/master/dist/example-js.html)
+You need the file `dist/cryptojs-aes.min.js` and `dist/cryptojs-aes-format.js`
 ```html
 <script src="dist/cryptojs-aes.min.js"></script>
 <script src="dist/cryptojs-aes-format.js"></script>
