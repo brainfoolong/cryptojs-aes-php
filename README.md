@@ -44,7 +44,7 @@ You need the file `dist/cryptojs-aes.min.js` and `dist/cryptojs-aes-format.js`
         // encrypt value
         let valueToEncrypt = 'foobar' // this could also be object/array/whatever
         let password = '123456'
-        let encrypted = CryptoJS.AES.encrypt(valueToEncrypt, password, { format: CryptoJSAesJson }).toString()
+        let encrypted = CryptoJS.AES.encrypt(JSON.stringify(valueToEncrypt), password, { format: CryptoJSAesJson }).toString()
         console.log('Encrypted: ' + encrypted)
         // something like: {"ct":"NJzdx9GyvW6RglcNeldSng==","iv":"ad4bdf7f5a89ec335083bedaff34e851","s":"9a607051e0f4517e"}
       })()
