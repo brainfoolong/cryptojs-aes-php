@@ -45,17 +45,18 @@ You need the file `dist/cryptojs-aes.min.js` and `dist/cryptojs-aes-format.js`
         let valueToEncrypt = 'foobar' // this could also be object/array/whatever
         let password = '123456'
         let encrypted = CryptoJS.AES.encrypt(JSON.stringify(valueToEncrypt), password, { format: CryptoJSAesJson }).toString()
-        console.log('Encrypted: ' + encrypted)
-        // something like: {"ct":"NJzdx9GyvW6RglcNeldSng==","iv":"ad4bdf7f5a89ec335083bedaff34e851","s":"9a607051e0f4517e"}
+        console.log('Encrypted:', encrypted)
+        // something like: {"ct":"10MOxNzbZ7vqR3YEoOhKMg==","iv":"9700d78e12910b5cccd07304333102b7","s":"c6b0b7a3dc072248"}
       })()
     </script>
     <script>
       (function () {
-        // decrypt value
-        let encrypted = '{"ct":"NJzdx9GyvW6RglcNeldSng==","iv":"ad4bdf7f5a89ec335083bedaff34e851","s":"9a607051e0f4517e"}'
+         // decrypt value
+        let encrypted = '{"ct":"hQDvpbAKTGp1mXgzSShR9g==","iv":"57fd85773d898d1f9f868c53b436e28f","s":"a2dac436512077c5"}'
         let password = '123456'
         let decrypted = CryptoJS.AES.decrypt(encrypted, password, { format: CryptoJSAesJson }).toString(CryptoJS.enc.Utf8)
-        console.log('Decrypted: ' + decrypted)
+        console.log('Decrypted JSON stringified string - You have to pass this through JSON.parse() to get original values:', decrypted)
+        console.log('Decrypted JSON parsed (Original Value):', JSON.parse(decrypted))
       })()
     </script>
 ```
