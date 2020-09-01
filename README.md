@@ -61,8 +61,12 @@ You need the file `dist/cryptojs-aes.min.js` and `dist/cryptojs-aes-format.js`
     </script>
 ```
 
+## Supported PHP versions
+* 8.x
+* 7.x
+* 5.x (head to the [legacy branch](https://github.com/brainfoolong/cryptojs-aes-php/tree/legacy))
+
 ## Requirements
-* PHP 7.x - If you need 5.x support, head to the [legacy branch](https://github.com/brainfoolong/cryptojs-aes-php/tree/legacy)
 * PHP with OpenSSL Support: http://php.net/manual/en/openssl.installation.php
 * Does not work with following php.ini option enabled: http://php.net/manual/en/mbstring.overload.php
 
