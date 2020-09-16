@@ -1,0 +1,25 @@
+{
+  "name": "brainfoolong/cryptojs-aes-php",
+  "type": "library",
+  "description": "CryptoJS 3.x AES encryption/decryption on client side with Javascript and on server side with PHP",
+  "keywords": [
+    "aes",
+    "php",
+    "javascript",
+    "encryption"
+  ],
+  "homepage": "https://github.com/brainfoolong/cryptojs-aes-php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Roland Eigelsreiter",
+      "homepage": "https://github.com/brainfoolong/cryptojs-aes-php",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Nullix\\CryptoJsAes\\": "src/"
+    }
+  }
+}
