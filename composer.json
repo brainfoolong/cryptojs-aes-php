@@ -23,5 +23,8 @@
     }
   },
   "minimum-stability": "dev",
-  "version": "2.0.1"
+  "version": "2.0.1",
+  "require": {
+    "php": ">=7.0.0"
+  }
 }
