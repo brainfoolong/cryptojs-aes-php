@@ -22,5 +22,6 @@
       "Nullix\\CryptoJsAes\\": "src/"
     }
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "version": "2.0.1"
 }
