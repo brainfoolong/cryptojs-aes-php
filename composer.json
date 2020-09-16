@@ -21,5 +21,6 @@
     "psr-4": {
       "Nullix\\CryptoJsAes\\": "src/"
     }
-  }
+  },
+  "minimum-stability": "stable"
 }
