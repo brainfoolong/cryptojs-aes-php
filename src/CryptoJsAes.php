@@ -6,10 +6,8 @@ namespace Nullix\CryptoJsAes;
  * Encrypt/Decrypt data from Javascript's CryptoJS
  * PHP 7.x and later supported
  * If you need PHP 5.x support, goto the legacy branch https://github.com/brainfoolong/cryptojs-aes-php/tree/legacy
- *
  * @link https://github.com/brainfoolong/cryptojs-aes-php
- * @link https://0x.at (My other projects)
- * @author BrainFooLong
+ * @version 2.1.0
  */
 class CryptoJsAes
 {
