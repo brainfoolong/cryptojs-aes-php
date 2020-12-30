@@ -22,7 +22,6 @@
       "Nullix\\CryptoJsAes\\": "src/"
     }
   },
-  "minimum-stability": "dev",
   "version": "2.1.0",
   "require": {
     "php": ">=7.0.0"

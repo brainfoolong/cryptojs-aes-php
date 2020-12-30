@@ -57,6 +57,9 @@ You need the file `dist/cryptojs-aes.min.js` and `dist/cryptojs-aes-format.js`
     </script>
 ```
 
+## Composer Install
+    composer require brainfoolong/cryptojs-aes-php
+
 ## Supported PHP versions
 * 8.x
 * 7.x
