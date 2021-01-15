@@ -79,6 +79,8 @@ Breaking changes: This library has changed to PSR-4 namespaces as of 7. April 20
 * Does not work with following php.ini option enabled: http://php.net/manual/en/mbstring.overload.php
 
 ## Changelog
+* 2.1.1 - 15\. January 2021 
+  * just a few documentation and composer fixes
 * 2.1.0 - 30\. December 2020 
   * added quick decrypt and encrypt functions: `CryptoJSAesJson.encrypt()` and `CryptoJSAesJson.decrypt()` - See examples for more information
 * 7\. April 2020 
