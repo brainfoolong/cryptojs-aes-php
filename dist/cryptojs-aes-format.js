@@ -1,7 +1,7 @@
 /**
  * AES JSON formatter for CryptoJS
  * @link https://github.com/brainfoolong/cryptojs-aes-php
- * @version 2.1.0
+ * @version 2.1.1
  */
 
 var CryptoJSAesJson = {

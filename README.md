@@ -2,12 +2,13 @@
 
 A tool to AES encrypt/decrypt data in javascript and/or PHP. You can use it for PHP only, for Javascript only or mix it together. 
 
-It uses default aes-256-cbc implementation with random salts and initialization vector.
+It uses default `aes-256-cbc` implementation with random salts and random initialization vector. This library does not support other ciphers or modes.
 
 ## Features
 * Encrypt any value in Javascript (objects/array/etc...) - Everything that can be passed to `JSON.stringify`
 * Encrypt any value in PHP  (object/array/etc...) - Everything that can be passed to `json_encode`
 * Decrypt in PHP/Javascript, doesn't matter where you have encrypted the values
+
 
 ## How to use
 ###### PHP | See [dist/example-php.php](https://github.com/brainfoolong/cryptojs-aes-php/blob/master/dist/example-php.php)
@@ -64,6 +65,11 @@ You need the file `dist/cryptojs-aes.min.js` and `dist/cryptojs-aes-format.js`
 * 8.x
 * 7.x
 * 5.x (head to the [legacy branch](https://github.com/brainfoolong/cryptojs-aes-php/tree/legacy))
+
+## Security Notes
+Since the time that this library has been created, encyption technologies has been evolved. Using AES-256-CBC encryption is still good and safe but there are already better alternatives than this library or CryptoJS. If you require really high security than you should invest more time for what is suitable for you.
+
+Also, there's a good article about PHP issues/info related to this library: https://stackoverflow.com/questions/16600708/how-do-you-encrypt-and-decrypt-a-php-string/30159120#30159120
 
 ## Upgrade Info
 Breaking changes: This library has changed to PSR-4 namespaces as of 7. April 2020. Also parameters and behaviour has changed to the previous version. For the old version of this library head to the [legacy branch](https://github.com/brainfoolong/cryptojs-aes-php/tree/legacy).

@@ -22,8 +22,10 @@
       "Nullix\\CryptoJsAes\\": "src/"
     }
   },
-  "version": "2.1.0",
+  "version": "2.1.1",
   "require": {
-    "php": ">=7.0.0"
+    "php": ">=7.0.0",
+    "ext-openssl": "*",
+    "ext-json": "*"
   }
 }
