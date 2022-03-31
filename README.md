@@ -67,7 +67,7 @@ You need the file `dist/cryptojs-aes.min.js` and `dist/cryptojs-aes-format.js`
 * 5.x (head to the [legacy branch](https://github.com/brainfoolong/cryptojs-aes-php/tree/legacy))
 
 ## Security Notes
-Since the time that this library has been created, encryption technologies has been evolved. This library is still considered and using AES-256-CBC encryption is still good and safe but there are (maybe) already better alternatives than this library or CryptoJS itself. If you require really high security, you should invest more time for what is suitable for you.
+Since the time that this library has been created, encryption technologies has been evolved. This library and using AES-256-CBC encryption is still good and safe but there are (maybe) already better alternatives than this library or CryptoJS itself. If you require really high security, you should invest more time for what is suitable for you.
 
 Also, there's a good article about PHP issues/info related to this library: https://stackoverflow.com/questions/16600708/how-do-you-encrypt-and-decrypt-a-php-string/30159120#30159120
 
