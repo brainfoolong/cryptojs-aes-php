@@ -5,27 +5,34 @@
     <title>CryptoJS Aes PHP</title>
     <script src="cryptojs-aes.min.js"></script>
     <script src="cryptojs-aes-format.js"></script>
-    <script>
-      (function () {
-        // encrypt value
-        let valueToEncrypt = 'foobar' // this could also be object/array/whatever
-        let password = '123456'
-        let encrypted = CryptoJSAesJson.encrypt(valueToEncrypt, password)
-        console.log('Encrypted:', encrypted)
-        // something like: {"ct":"10MOxNzbZ7vqR3YEoOhKMg==","iv":"9700d78e12910b5cccd07304333102b7","s":"c6b0b7a3dc072248"}
-      })()
-    </script>
-    <script>
-      (function () {
-        // decrypt value
-        let encrypted = '{"ct":"hQDvpbAKTGp1mXgzSShR9g==","iv":"57fd85773d898d1f9f868c53b436e28f","s":"a2dac436512077c5"}'
-        let password = '123456'
-        let decrypted = CryptoJSAesJson.decrypt(encrypted, password)
-        console.log('Decrypted:', decrypted)
-      })()
-    </script>
 </head>
 <body>
-<h2>See F12 console for output values</h2>
+<div id="results">
+
+</div>
+<script>
+  (function () {
+    // encrypt value
+    let url = new URL(window.location.href)
+    let results = document.getElementById('results')
+    let valueToEncrypt = 'Coming from JS - foobar' // this could also be object/array/whatever
+    let password = '123456'
+    let encrypted = CryptoJSAesJson.encrypt(valueToEncrypt, password)
+    results.innerHTML += 'Encrypted:<br/><a href="example-php.php?encrypted=' + btoa(encrypted) + '" title="Pass to PHP testpage" target="_blank">' + encrypted + '</a><br/><br/>'
+    // something like: {"ct":"10MOxNzbZ7vqR3YEoOhKMg==","iv":"9700d78e12910b5cccd07304333102b7","s":"c6b0b7a3dc072248"}
+  })()
+</script>
+<script>
+  (function () {
+    let url = new URL(window.location.href)
+    let results = document.getElementById('results')
+    // decrypt value
+    let encrypted = url.searchParams.get('encrypted') ? atob(url.searchParams.get('encrypted')) : '{"ct":"hQDvpbAKTGp1mXgzSShR9g==","iv":"57fd85773d898d1f9f868c53b436e28f","s":"a2dac436512077c5"}'
+    let password = '123456'
+    let decrypted = CryptoJSAesJson.decrypt(encrypted, password)
+    results.innerHTML += 'Decrypted (From ' + encrypted + '):<br/>'
+    results.innerHTML += decrypted
+  })()
+</script>
 </body>
 </html>
