@@ -20,14 +20,12 @@ class CryptoJsAes
     public static function encrypt($value, string $passphrase)
     {
         $salt = openssl_random_pseudo_bytes(8);
-        $salted = '';
-        $dx = '';
-        while (strlen($salted) < 48) {
-            $dx = md5($dx . $passphrase . $salt, true);
-            $salted .= $dx;
-        }
-        $key = substr($salted, 0, 32);
-        $iv = substr($salted, 32, 16);
+        $iv = openssl_random_pseudo_bytes(16);
+        
+        $concatedPassphrase = $passphrase . $salt;
+        $key = md5($concatedPassphrase, true);
+        $key .= md5($key . $concatedPassphrase, true);
+
         $encrypted_data = openssl_encrypt(json_encode($value), 'aes-256-cbc', $key, true, $iv);
         $data = ["ct" => base64_encode($encrypted_data), "iv" => bin2hex($iv), "s" => bin2hex($salt)];
         return json_encode($data);
