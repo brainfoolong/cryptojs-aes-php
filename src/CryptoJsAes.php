@@ -54,7 +54,7 @@ class CryptoJsAes
             $result .= $md5[$i];
         }
         $key = substr($result, 0, 32);
-        $data = openssl_decrypt($ct, 'aes-256-cbc', $key, true, $iv);
+        $data = openssl_decrypt($ct, 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $iv);
         return json_decode($data, true);
     }
 }
