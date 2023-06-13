@@ -79,12 +79,14 @@ Also, there's a good article about PHP issues/info related to this library: http
 * Does not work with following php.ini option enabled: http://php.net/manual/en/mbstring.overload.php
 
 ## Changelog
-* 2.2.0 - 13\. June 2023
+* 2.2.0 - 13. June 2023
+  * fixed implicit true to 1 conversion by using proper OPENSSL flag (thx @benjumanji)
   * added tests for php and js
-  * show a warning for passphrases with non ASCII characters, as it is and was never supported
-* 2.1.1 - 15\. January 2021 
+  * added a js console warning for passphrases with non ASCII characters, as it is and was never supported
+  * minor improved php decrypt to avoid one useless hash cycle
+* 2.1.1 - 15. January 2021 
   * just a few documentation and composer fixes
-* 2.1.0 - 30\. December 2020 
+* 2.1.0 - 30. December 2020 
   * added quick decrypt and encrypt functions: `CryptoJSAesJson.encrypt()` and `CryptoJSAesJson.decrypt()` - See examples for more information
-* 7\. April 2020 
+* 2.x.x - 7. April 2020 
   * Upgraded project to namespaces
