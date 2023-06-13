@@ -27,7 +27,6 @@
         break
       case 'encode': {
         const encrypted = CryptoJSAesJson.encrypt(originalValue, password)
-        console.log(encrypted)
         if (encrypted.includes('"ct"') && encrypted.includes('"iv"') && encrypted.includes('"s"')) {
           results.innerText = 'OK'
         }

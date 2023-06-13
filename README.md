@@ -1,4 +1,7 @@
-# CryptoJS 3.x AES encryption/decryption on client side with Javascript and on server side with PHP
+# CryptoJS 3.x AES encryption/decryption on client side with Javascript and on server side with PHP 
+
+[![Tests](https://github.com/brainfoolong/cryptojs-aes-php/actions/workflows/tests.yml/badge.svg)](https://github.com/brainfoolong/cryptojs-aes-php/actions/workflows/tests.yml)
+
 
 A tool to AES encrypt/decrypt data in javascript and/or PHP. You can use it for PHP only, for Javascript only or mix it together. 
 
@@ -76,6 +79,9 @@ Also, there's a good article about PHP issues/info related to this library: http
 * Does not work with following php.ini option enabled: http://php.net/manual/en/mbstring.overload.php
 
 ## Changelog
+* 2.2.0 - 13\. June 2023
+  * added tests for php and js
+  * show a warning for passphrases with non ASCII characters, as it is and was never supported
 * 2.1.1 - 15\. January 2021 
   * just a few documentation and composer fixes
 * 2.1.0 - 30\. December 2020 

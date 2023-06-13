@@ -1,7 +1,7 @@
 /**
  * AES JSON formatter for CryptoJS
  * @link https://github.com/brainfoolong/cryptojs-aes-php
- * @version 2.1.1
+ * @version 2.2.0
  */
 
 var CryptoJSAesJson = {
@@ -12,6 +12,9 @@ var CryptoJSAesJson = {
    * @return {string}
    */
   'encrypt': function (value, password) {
+    if (password.match(/[^\x00-\x7F]/)) {
+      console.warn('CryptoJSAES: Your passphrase contains non ASCII characters - This is not supported. Hash your passphrase with MD5 or similar hashes to prevent those issues')
+    }
     return CryptoJS.AES.encrypt(JSON.stringify(value), password, { format: CryptoJSAesJson }).toString()
   },
   /**
@@ -21,6 +24,9 @@ var CryptoJSAesJson = {
    * @return {*}
    */
   'decrypt': function (jsonStr, password) {
+    if (password.match(/[^\x00-\x7F]/)) {
+      console.warn('CryptoJSAES: Your passphrase contains non ASCII characters - This is not supported. Hash your passphrase with MD5 or similar hashes to prevent those issues')
+    }
     return JSON.parse(CryptoJS.AES.decrypt(jsonStr, password, { format: CryptoJSAesJson }).toString(CryptoJS.enc.Utf8))
   },
   /**

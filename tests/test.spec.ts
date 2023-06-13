@@ -7,7 +7,8 @@ test('Run all tests', async ({ page }) => {
   })
   const phpPortMapping = [
     9970, // 7.0
-    //9982, // 8.2
+    9982, // 8.2
+    9999, // latest
   ]
   const actionsMap = ['encode', 'decode', 'cross']
   for (let i = 0; i < phpPortMapping.length; i++) {

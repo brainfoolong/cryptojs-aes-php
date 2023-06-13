@@ -13,7 +13,7 @@ use const OPENSSL_RAW_DATA;
  * PHP 7.x and later supported
  * If you need PHP 5.x support, goto the legacy branch https://github.com/brainfoolong/cryptojs-aes-php/tree/legacy
  * @link https://github.com/brainfoolong/cryptojs-aes-php
- * @version 2.1.1
+ * @version 2.2.0
  */
 class CryptoJsAes
 {
