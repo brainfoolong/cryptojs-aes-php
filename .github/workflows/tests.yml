@@ -16,13 +16,25 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: 7.0
-      run: php -S 127.0.0.1:9970
 
     - name: Setup PHP 8.2
       uses: shivammathur/setup-php@v2
       with:
         php-version: 8.2
-      run: php -S 127.0.0.1:9982
+
+    - name: Setup PHP latest
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: latest
+
+    - name: Start PHP 7.0 server
+      run: php7.0 -S 127.0.0.1:9970
+
+    - name: Start PHP 8.2 server
+      run: php8.2 -S 127.0.0.1:9982
+
+    - name: Start PHP latest server
+      run: php -S 127.0.0.1:9999
 
     - uses: actions/setup-node@v2
       with:
