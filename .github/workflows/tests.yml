@@ -40,7 +40,7 @@ jobs:
         node-version: '14.x'
 
     - name: Install npm dependencies
-      run: npm ci
+      run: npm install -y
 
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
