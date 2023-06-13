@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CryptoJS Aes PHP Tests</title>
+    <script src="../dist/cryptojs-aes.min.js"></script>
+    <script src="../dist/cryptojs-aes-format.js"></script>
+</head>
+<body>
+<div id="results"></div>
+<script>
+  (async function () {
+    let url = new URL(window.location.href)
+    let results = document.getElementById('results')
+    const originalValue = { 'foo': 'bar', 'test': '123öäüß' }
+    const password = 'fancypensy_0192661'
+    switch (url.searchParams.get('action')) {
+      case 'php': {
+        const decrypted = CryptoJSAesJson.decrypt(atob(url.searchParams.get('encoded')), atob(url.searchParams.get('password')))
+        if (JSON.stringify(decrypted) === JSON.stringify(originalValue)) {
+          results.innerText = 'OK'
+        } else {
+          results.innerText = 'FAIL'
+        }
+      }
+        break
+      case 'encode': {
+        const encrypted = CryptoJSAesJson.encrypt(originalValue, password)
+        if (encrypted.includes('"ct"') && encrypted.includes('"iv"') && encrypted.includes('"s"')) {
+          results.innerText = 'OK'
+        }
+      }
+        break
+      case 'decode': {
+        const encrypted = '{"ct":"Ub4hX3ftm2xF1uU8A2gRCNlG2CxZpja5xjcXNP/CqwXLr7p5dQ+DXO2bZtTqCQlL","iv":"88c2a4ae3cbb5a3e68d367a795465103","s":"af114239cbf37e89"}'
+        const decrypted = CryptoJSAesJson.decrypt(encrypted, password)
+        if (JSON.stringify(decrypted) === JSON.stringify(originalValue)) {
+          results.innerText = 'OK'
+        }
+      }
+        break
+      case 'cross': {
+        const encrypted = CryptoJSAesJson.encrypt(originalValue, password)
+        results.innerText = await (await fetch('test-php.php?action=js&encoded=' + btoa(encrypted) + '&password=' + btoa(password))).text()
+      }
+        break
+    }
+  })()
+</script>
+</body>
+</html>
