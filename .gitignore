@@ -2,7 +2,6 @@
 .npmrc
 vendor
 composer.lock
-package-lock.json
 /test-results/
 /playwright-report/
 /playwright/.cache/
