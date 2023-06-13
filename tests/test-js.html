@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CryptoJS Aes PHP Tests</title>
+    <title>CryptoJS Aes JS Tests</title>
     <script src="../dist/cryptojs-aes.min.js"></script>
     <script src="../dist/cryptojs-aes-format.js"></script>
 </head>
@@ -22,26 +22,31 @@
         } else {
           results.innerText = 'FAIL'
         }
+        results.setAttribute('data-result', '1')
       }
         break
       case 'encode': {
         const encrypted = CryptoJSAesJson.encrypt(originalValue, password)
+        console.log(encrypted)
         if (encrypted.includes('"ct"') && encrypted.includes('"iv"') && encrypted.includes('"s"')) {
           results.innerText = 'OK'
         }
+        results.setAttribute('data-result', '1')
       }
         break
       case 'decode': {
-        const encrypted = '{"ct":"Ub4hX3ftm2xF1uU8A2gRCNlG2CxZpja5xjcXNP/CqwXLr7p5dQ+DXO2bZtTqCQlL","iv":"88c2a4ae3cbb5a3e68d367a795465103","s":"af114239cbf37e89"}'
+        const encrypted = '{"ct":"tEwvZSmr9wWagPz9y/Wug3YbPBjzrAlZ7vIR25bh1eGxqXxATuMJYG8O1fQWNRSj","iv":"b04916e6d6bfc4a567004adee9763f70","s":"41c3279e949d2f7d"}'
         const decrypted = CryptoJSAesJson.decrypt(encrypted, password)
         if (JSON.stringify(decrypted) === JSON.stringify(originalValue)) {
           results.innerText = 'OK'
         }
+        results.setAttribute('data-result', '1')
       }
         break
       case 'cross': {
         const encrypted = CryptoJSAesJson.encrypt(originalValue, password)
-        results.innerText = await (await fetch('test-php.php?action=js&encoded=' + btoa(encrypted) + '&password=' + btoa(password))).text()
+        results.innerText = (await (await fetch('test-php.php?action=js&encoded=' + btoa(encrypted) + '&password=' + btoa(password))).text()).match(/<body>(.*?)<\/body>/s)[1].trim()
+        results.setAttribute('data-result', '1')
       }
         break
     }
