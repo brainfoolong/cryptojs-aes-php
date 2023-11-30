@@ -1,6 +1,6 @@
 # Security Policy
 
-To privately report a security issue to me, you can join my slack channel at https://framelix.com/getstarted/issues and contact me (BrainFooLong) there.
+You can use GitHub to privately notify me about security issues.
 
 ## Supported Versions
 
