@@ -1,7 +1,7 @@
 {
   "name": "brainfoolong/cryptojs-aes-php",
   "type": "library",
-  "description": "CryptoJS 3.x AES encryption/decryption on client side with Javascript and on server side with PHP",
+  "description": "CryptoJS AES encryption/decryption on client side with Javascript and on server side with PHP",
   "keywords": [
     "aes",
     "php",

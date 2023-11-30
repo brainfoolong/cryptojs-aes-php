@@ -1,4 +1,4 @@
-# CryptoJS 3.x AES encryption/decryption on client side with Javascript and on server side with PHP
+# CryptoJS AES encryption/decryption on client side with Javascript and on server side with PHP
 
 [![Tests](https://github.com/brainfoolong/cryptojs-aes-php/actions/workflows/tests.yml/badge.svg)](https://github.com/brainfoolong/cryptojs-aes-php/actions/workflows/tests.yml)
 
