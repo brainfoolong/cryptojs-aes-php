@@ -88,6 +88,10 @@ CryptoJS itself. If you require really high security, you should invest more tim
 Also, there's a good article about PHP issues/info related to this
 library: https://stackoverflow.com/questions/16600708/how-do-you-encrypt-and-decrypt-a-php-string/30159120#30159120
 
+## Alternatives - ASCON
+
+You may wonder if there are alternatives to AES encryption that you can use in PHP/JS. ASCON is a newer, lightweight cipher that have been selected in 2023 by the [NIST](https://csrc.nist.gov/projects/lightweight-cryptography) as the new standard for lightweight cryptography, which may suite your needs. I have created libraries for both PHP and JS which you can find at https://github.com/brainfoolong/php-ascon and https://github.com/brainfoolong/js-ascon
+
 ## Requirements
 
 * PHP with OpenSSL Support: http://php.net/manual/en/openssl.installation.php
