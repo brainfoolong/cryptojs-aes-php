@@ -30,8 +30,8 @@
     let encrypted = url.searchParams.get('encrypted') ? atob(url.searchParams.get('encrypted')) : '{"ct":"hQDvpbAKTGp1mXgzSShR9g==","iv":"57fd85773d898d1f9f868c53b436e28f","s":"a2dac436512077c5"}'
     let password = '123456'
     let decrypted = CryptoJSAesJson.decrypt(encrypted, password)
-    results.innerHTML += 'Decrypted (From ' + encrypted + '):<br/>'
-    results.innerHTML += decrypted
+    results.innerHTML += 'Decrypted (From ' + encrypted.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '):<br/>'
+    results.innerHTML += decrypted.replace(/</g, '&lt;').replace(/>/g, '&gt;')
   })()
 </script>
 </body>
