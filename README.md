@@ -2,6 +2,9 @@
 
 [![Tests](https://github.com/brainfoolong/cryptojs-aes-php/actions/workflows/tests.yml/badge.svg)](https://github.com/brainfoolong/cryptojs-aes-php/actions/workflows/tests.yml)
 
+> [!IMPORTANT] 
+> This library is considered deprecated, read-only and superseeded by my newer library https://github.com/brainfoolong/js-aes-php - It's basically the same without the need for the third party library `CryptoJS`.
+
 A tool to AES encrypt/decrypt data in javascript and/or PHP. You can use it for PHP only, for Javascript only or mix it
 together.
 
